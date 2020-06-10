@@ -21,7 +21,7 @@ function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
-  const [stepOne, setStepOne] = useState(false);
+  const [stepOne, setStepOne] = useState(true);
   const [message, setMessage] = useState('');
   const [passHidden, setPassHidden] = useState(true);
   const [loading, setLoading] = useState(false);
