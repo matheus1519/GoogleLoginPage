@@ -42,6 +42,7 @@ export default createGlobalStyle`
 
   a{
     text-decoration:none;
+    cursor:pointer;
   }
 
   a:active, .btn-secondary:active{

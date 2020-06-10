@@ -32,6 +32,7 @@ function Login() {
       setPersonList(response.data);
     }
     loadUsers();
+    document.querySelector('#email').focus();
   }, []);
 
   useEffect(() => {
@@ -133,6 +134,7 @@ function Login() {
                   required
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
+                  onKeyPress={(e) => e.which == 13 && handleNext()}
                 />
                 <label htmlFor="email">Email ou telefone</label>
               </div>
@@ -169,6 +171,7 @@ function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                   required
+                  onKeyPress={(e) => e.which == 13 && handleNextTwo()}
                 />
                 <label htmlFor="password">Senha</label>
                 {passHidden ? (
